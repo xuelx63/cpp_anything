@@ -1,6 +1,14 @@
 #include <iostream>
 #include <vector>
 
+void visualize (const std::vector<int>& nums) {
+    std::cout << "nums:" << " ";
+    for (int i=0; i<nums.size(); i++) {
+        std::cout << nums[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
 class Solution {
     public: 
         int removeElement (std::vector<int>& nums, int val) {
@@ -25,16 +33,6 @@ class Solution {
             return slowIndex;
     }
 };
-
-
-void visualize (std::vector<int>& nums) {
-    std::cout << "nums:" << " ";
-    for (int i=0; i<nums.size(); i++) {
-        std::cout << nums[i] << " ";
-    }
-    std::cout << std::endl;
-}
-
 
 int main () {
     std::vector<int> nums = {1, 2, 2, 3, 4, 5};
